@@ -1,3 +1,18 @@
 body {
-    background-color: blue;
+    font-family: "Neue Helvetica", Arial;
+    background-color: wheat;
+    color: white;
+}
+
+@font-face {
+    font-family: "Neue Helvetica";
+    src: url(./assets/fonts/HelveticaNeueLight.otf);
+}
+
+.header {
+    background-color: orange;
+}
+
+.footer {
+    background-color: grey;
 }
