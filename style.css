@@ -15,7 +15,6 @@ body {
 /* Header */
 
 .header {
-    /* background-color: orange; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,19 +53,25 @@ body {
 }
 
 .heroText {
-    padding: 100px 580px 80px 20px;
+    padding: 100px 580px 80px 30px;
 }
 
 .heroSection h1 {
-    font-size: 3em;
+    font-size: 3rem;
     text-transform: uppercase;
     line-height: 1em;
+    max-width: 800px;
+
 }
 
 .heroSection p {
     font-size: 2em;
     line-height: 1em;
     margin: 20px 0;
+    max-width: 700px;
+    line-height: 1.3em;
+    letter-spacing: 2px;
+
 }
 
 .heroSection img {
@@ -83,9 +88,12 @@ body {
 /* Widgets style */
 .widgets {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     color: white;
-    opacity: 0.8;
+    flex-wrap: wrap;
+    /* width: 100vh; */
+    margin: 0 auto;
+
 }
 
 .widgetBox {
@@ -93,23 +101,37 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 30px 20px 100px 20px;
-    padding: 50px;
+    margin: 20px 20px 100px 20px;
+    padding: 60px 30px;
     background-color: orange;
-    width: 300px;
-    height: 230px;
+    width: 270px;
+    height: 220px;
     font-size: 1.3em;
     border-radius: 8px;
+    opacity: 0.8;
+
+}
+
+.widgetText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .widgetBox h3 {
     font-family: Arial;
     font-size: 1.7em;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 .widgetBox img {
     width: 70px;
+}
+
+.widgetBox p {
+    margin: 20px;
 }
 
 /* Footer */
@@ -132,3 +154,78 @@ footer a img {
 }
 
 /* responsiveness */
+
+@media (max-width: 768px) {
+    .navMenu {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: block;
+    }
+
+    .heroSection {
+        width: auto;
+        min-height: auto;
+    }
+
+    .heroText {
+        padding: 100px;
+    }
+
+    .heroSection h1 {
+        font-size: 2rem;
+        max-width: 800px;
+
+    }
+
+    .heroSection p {
+        font-size: 1em;
+    }
+
+    .widgetBox {
+        opacity: 1;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer p {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 430px) {
+    .logo {
+        font-size: large;
+    }
+
+    .heroSection h1 {
+        font-size: 2rem;
+
+    }
+
+    .heroSection p {
+        font-size: 1.5em;
+
+    }
+
+    .heroText {
+        padding: 30px;
+    }
+
+    .widgets {
+        margin: 0;
+        padding: 0;
+    }
+
+    .widgetBox {
+        margin: 20px 20px 100px 20px;
+        padding: 30px;
+        font-size: 1em;
+
+    }
+
+}
